@@ -1,4 +1,4 @@
-# Yugen Theme
+# Cryo Theme
 
 ## Quick Install
 

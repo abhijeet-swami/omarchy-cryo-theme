@@ -1,0 +1,94 @@
+@define-color selected-text #00d9ff;
+@define-color text #eaeaef;
+@define-color base #1a1b1e;
+@define-color border #50a0ff;
+@define-color foreground #eaeaef;
+@define-color background #1a1b1e;
+@define-color hover #2a2b2e;
+@define-color accent #00d9ff;
+@define-color white #ffffff;
+
+#window {
+  background: transparent;
+}
+
+#window > #box,
+#box {
+  background: alpha(@base, 0.45);
+  padding: 8px;
+  color: @text;
+  border: 1px solid @border;
+  margin: 0px;
+}
+
+#search {
+  background: alpha(@base, 0);
+  /* border: 1px solid alpha(@accent, 0.4); */
+  border-radius: 0px;
+}
+
+#input {
+  background: none;
+  color: @accent;
+  padding: 0;
+  font-weight: 200;
+}
+
+#input placeholder {
+  opacity: 0.4;
+  color: @text;
+}
+
+#list {
+  background: transparent;
+  margin-top: 4px;
+}
+
+child {
+  padding: 0px 8px;
+  background: transparent;
+  border-radius: 0;
+  border-left: 2px solid transparent;
+  transition: all 150ms ease;
+}
+
+child:hover {
+  background: linear-gradient(90deg, alpha(@accent, 0.08), transparent 80%);
+  border-left: 2px solid alpha(@accent, 0.6);
+}
+
+child:selected {
+  background: linear-gradient(90deg, alpha(@accent, 0.25), transparent 100%);
+  border-left: 2px solid @accent;
+}
+
+#item {
+  padding: 0;
+}
+
+#icon {
+  margin-right: 12px;
+  -gtk-icon-transform: scale(0.8);
+}
+
+child:selected #icon {
+  filter: none;
+}
+
+#text {
+  color: @text;
+  padding: 10px 0;
+  font-weight: 100;
+}
+
+child:selected #text,
+child:selected #label {
+  color: @accent;
+  font-weight: 200;
+  text-shadow: none;
+}
+
+child:hover #text,
+child:hover #label {
+  color: @foreground;
+}

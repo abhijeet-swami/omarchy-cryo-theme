@@ -69,6 +69,10 @@ window#waybar {
   color: @foreground;
 }
 
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
 #workspaces button.urgent {
   color: @accent-red;
   background-color: alpha(@accent-red, 0.15);
